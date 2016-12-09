@@ -37,16 +37,43 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
+                response.trim();
 		if (statement.indexOf("no") >= 0)
 		{
-			response = "Why so negative?";
+			response = "Why not?";
 		}
 		else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0)
 		{
-			response = "Tell me more about your family.";
+			response = "Who is she?";
+		}
+                else if (statement.indexOf("father") >= 0
+				|| statement.indexOf("brother") >= 0)
+		{
+			response = "Who is he?";
+		}
+                else if (statement.indexOf("dog") >= 0
+				|| statement.indexOf("cat") >= 0)
+		{
+			response = "Tell me more about your pets";
+		}
+                else if (statement.indexOf("Tholking") >= 0)
+		{
+			response = "He sounds like a good teacher.";
+		}
+                else if (statement.indexOf("") >= 0)
+		{
+			response = "Say something, please.";
+		}
+                else if (statement.indexOf("Dhruv") >= 0)
+		{
+			response = "Nice name.";
+		}
+                else if (statement.indexOf("Food") >= 0)
+		{
+			response = "That sounds good.";
 		}
 		else
 		{
